@@ -1,8 +1,5 @@
 var fs = require('fs');
-var file = fs.readFileSync('process.argv[1]');
+var file = fs.readFileSync(process.argv[2]);
 
-var count = 0;
-
-var file_split = file.split('/n');
-
-console.log(file_split.length);
+var count = file.toString().split('\n').length-1;
+console.log(count);
